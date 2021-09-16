@@ -18,11 +18,3 @@ export async function sql_query(query_string, values = []){
         throw Error(error.message)
     }
 }
-/*const mysql = require('serverless-mysql')({
-    config: {
-        host: process.env.MYSQL_HOST,
-        database: process.env.MYSQL_NAME,
-        user: process.env.MYSQL_USER,
-        password: process.env.MYSQL_PASS
-    }
-})*/
