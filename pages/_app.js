@@ -1,11 +1,6 @@
-import Layout from "../components/Layout"
 import 'tailwindcss/tailwind.css'
 const MyApp = ({ Component, pageProps }) => {
-    return (
-        <Layout>
-            <Component {...pageProps} />
-        </Layout>
-    )
+    const getLayout = Component.getLayout || ((page) => page)
+    return getLayout(<Component {...pageProps} />)
 }
-
 export default MyApp

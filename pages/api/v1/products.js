@@ -1,4 +1,4 @@
-import { sql_query } from "../../utils/db";
+import { sql_query } from "../../../utils/db";
 
 const handler = async (_, res) => {
     try {

@@ -1,5 +1,6 @@
 import Head from 'next/head'
-
+import Layout from '../components/Layout'
+import LayoutChild from '../components/LayoutChild'
 export default function Home() {
 	return (
 		<div>
@@ -8,6 +9,15 @@ export default function Home() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<h1>Home</h1>
+			<h2>The value of customKey is: {process.env.TITLE}</h2>
 		</div>
+	)
+}
+
+Home.getLayout = function getLayout(page){
+	return(
+		<Layout>
+			<LayoutChild>{page}</LayoutChild>
+		</Layout>
 	)
 }

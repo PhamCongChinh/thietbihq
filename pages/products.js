@@ -1,4 +1,6 @@
 import React from 'react'
+import Layout from '../components/Layout'
+import LayoutChild from '../components/LayoutChild'
 import { sql_query } from '../utils/db'
 const Products = ({ products }) => {
     return (
@@ -20,6 +22,14 @@ export async function getStaticProps(context){
             products
         }
     }
+}
+
+Products.getLayout = function getLayout(page){
+    return (
+        <Layout>
+            <LayoutChild>{page}</LayoutChild>
+        </Layout>
+    )
 }
 
 export default Products
