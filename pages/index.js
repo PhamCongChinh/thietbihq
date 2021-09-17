@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Layout from '../components/Layout'
-import LayoutChild from '../components/LayoutChild'
-export default function Home() {
+const Home = () => {
 	return (
 		<div>
 			<Head>
@@ -15,9 +14,8 @@ export default function Home() {
 }
 
 Home.getLayout = function getLayout(page){
-	return(
-		<Layout>
-			<LayoutChild>{page}</LayoutChild>
-		</Layout>
+	return (
+		<Layout>{page}</Layout>
 	)
 }
+export default Home

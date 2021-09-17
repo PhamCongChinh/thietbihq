@@ -1,5 +1,5 @@
 import React from 'react'
-
+import LayoutDefault from '../../components/LayoutDefault'
 const Cart = () => {
     return (
         <div>
@@ -8,4 +8,9 @@ const Cart = () => {
     )
 }
 
+Cart.getLayout = function getLayout(page){
+    return (
+        <LayoutDefault>{page}</LayoutDefault>
+    )
+}
 export default Cart

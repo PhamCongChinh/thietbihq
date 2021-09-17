@@ -31,8 +31,20 @@ const Header = () => {
                     <Link href="/">
                         <a className="pr-3">Trang chủ</a>
                     </Link>
-                    <Link href="/products" as="/san-pham.html">
+                    <Link href="/products">
+                        <a className="px-3">Tin tức</a>
+                    </Link>
+                    <Link href="/products">
                         <a className="px-3">Sản phẩm</a>
+                    </Link>
+                    <Link href="/products">
+                        <a className="px-3">Dịch vụ</a>
+                    </Link>
+                    <Link href="/products">
+                        <a className="px-3">Nhà sản xuất</a>
+                    </Link>
+                    <Link href="/products">
+                        <a className="px-3">Liên hệ</a>
                     </Link>
                 </div>
             </div>

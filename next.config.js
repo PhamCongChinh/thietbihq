@@ -21,14 +21,14 @@ module.exports = (phase) => {
         })()
     }
 
-    const rewrites = async () => {
+    /*const rewrites = async () => {
         return [
             {
                 source: '/san-pham.html',
                 destination: '/products',
             }
         ]
-    }
+    }*/
 
     // Runtime config
 
@@ -42,7 +42,7 @@ module.exports = (phase) => {
     }
     return {
         env,
-        rewrites,
+        //rewrites,
         etag,
         generateBuildId
     }
