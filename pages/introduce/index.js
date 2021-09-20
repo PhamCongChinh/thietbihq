@@ -39,7 +39,7 @@ const Introduce = () => {
 
 Introduce.getLayout = function getLayout(page){
     const breadcrumb = [
-		{id: '', name: '', slug: ''},
+		{name: 'Giới thiệu', url: '/gioi-thieu.html'},
 	]
     return (
         <Layout breadcrumb={breadcrumb}>{page}</Layout>

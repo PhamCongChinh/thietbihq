@@ -34,9 +34,7 @@ export async function getStaticProps(){
 }
 
 Home.getLayout = function getLayout(page){
-	const breadcrumb = [
-		{id: '', name: '', slug: ''},
-	]
+	const breadcrumb = ''
 	return (
 		<Layout breadcrumb={breadcrumb}>{page}</Layout>
 	)

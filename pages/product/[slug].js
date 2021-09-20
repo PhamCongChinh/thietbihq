@@ -32,10 +32,8 @@ export async function getStaticProps({ params }){
 
 Product.getLayout = function getLayout(page){
     const breadcrumb = [
-		{id: '', name: 'Trang chủ', slug: ''},
-        {id: '', name: 'Sản phẩm', slug: '/products'},
-        page.props.category,
-        page.props.product,
+        {name: page.props.category.name, url: `/san-pham/${page.props.category.slug}-${page.props.category.id}.html`},
+        {name: page.props.product.name, url: `/chi-tiet/${page.props.product.slug}-${page.props.product.id}.html`},
 	]
 	return (
 		<Layout breadcrumb={breadcrumb}>{page}</Layout>

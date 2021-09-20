@@ -9,7 +9,7 @@ const data = {
 const handler = async (_, res) => {
     try {
         const categories = await sql_query(
-            `SELECT c.id, c.name, c.slug FROM categories as c`
+            `SELECT c.id, c.name, c.slug FROM categories as c ORDER BY c.id DESC`
         )
         const newProducts = await sql_query(
             `SELECT p.name, p.slug, p.image, p.id FROM products as p ORDER BY p.id DESC LIMIT 10`

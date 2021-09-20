@@ -15,8 +15,7 @@ const Products = () => {
 
 Products.getLayout = function getLayout(page){
     const breadcrumb = [
-		{id: '', name: 'Trang chủ', slug: ''},
-        {id: '', name: 'Sản phẩm', slug: '/products'}
+        {name: 'Sản phẩm', url: '/san-pham.html'}
 	]
 	return (
 		<Layout breadcrumb={breadcrumb}>{page}</Layout>

@@ -10,6 +10,10 @@ module.exports = {
                 destination: '/introduce',
             },
             {
+                source: '/san-pham.html',
+                destination: '/products',
+            },
+            {
                 source: '/san-pham/:slug.html',
                 destination: '/products/:slug',
             },

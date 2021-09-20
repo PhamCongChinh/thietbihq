@@ -1,8 +1,8 @@
 import React from 'react'
-import Header from './Header'
-import Sidebar from './Sidebar'
-import SidebarR from './SidebarR'
-import Footer from './Footer'
+import Header from './layout/Header'
+import Sidebar from './layout/Sidebar'
+import SidebarR from './layout/SidebarR'
+import Footer from './layout/Footer'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { getCommon } from '../lib/api'
@@ -13,10 +13,10 @@ const Layout = ({ children, breadcrumb }) => {
     const common = getCommon()
     //if(!common) return <div>Loading...</div>
     return (
-        <div>
+        <div className="bg-gray-50">
             <Header/>
             <Breadcrumb breadcrumb={breadcrumb}/>
-            <div className="grid md:grid-cols-5 max-w-6xl mx-auto py-5">
+            <div className="grid md:grid-cols-5 max-w-6xl mx-auto my-5 bg-white">
                 <div className="md:col-span-1"><Sidebar {...common}/></div>
                 {router.pathname === '/' ? (
                     <>
