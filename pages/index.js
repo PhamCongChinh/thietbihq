@@ -1,21 +1,44 @@
-import Head from 'next/head'
 import Layout from '../components/Layout'
+import ProductsList from '../components/ProductsList'
+import SEO from '../components/SEO'
+import { getProducts } from '../lib/api'
+import { getCategories, getProductsQuery } from '../lib/query'
+
 const Home = () => {
+	const products = getProducts()
+	//if(!products) return <div>Loading...</div>
 	return (
 		<div>
-			<Head>
-				<title>Create Next App</title>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
-			<h1>Home</h1>
-			<h2>The value of customKey is: {process.env.TITLE}</h2>
+			<SEO
+				title="Thiết bị HQ - Thiết bị cơ khí, ngành may mặc, công nghiệp Nam Định"
+				siteTitle="https://thietbihq.com"
+				description="Cơ khí, điện nước, sơn Epoxy, thảm cầu lông, văn phòng, may mặc, khu công nghiệp Nam Định"
+			/>
+			{products ? (
+				<ProductsList products={products}/>
+			):('')}
+			
 		</div>
 	)
 }
 
+export async function getStaticProps(){
+    const categories = await getCategories()
+	const products = await getProductsQuery()
+    return{
+        props: {
+            categories,
+			products,
+        }
+    }
+}
+
 Home.getLayout = function getLayout(page){
+	const breadcrumb = [
+		{id: '', name: '', slug: ''},
+	]
 	return (
-		<Layout>{page}</Layout>
+		<Layout breadcrumb={breadcrumb}>{page}</Layout>
 	)
 }
 export default Home

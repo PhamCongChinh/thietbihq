@@ -1,0 +1,12 @@
+form.gsc-search-box {
+    margin-bottom: 0;
+}
+form table.gsc-search-box td.gsc-input{
+    padding-right: 0;
+}
+form .gsc-search-button{
+    margin-left: 0;
+}
+form .gsc-search-button-v2{
+    padding: 10px 14px;
+}

@@ -1,17 +1,27 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import Script from 'next/script'
 const Header = () => {
     return (
         <div id="header">
             {/**TOP */}
-            <div className="bg-gray-50">
+            <div className="bg-gray-50 py-1">
                 <div className="flex mx-auto max-w-6xl justify-between">
                     <Link href="/">
-                        <a>Cong ty TNHH thuong mai va san xuat HQ</a>
+                        <a className="text-sm text-gray-600 font-normal cursor-pointer">Công ty TNHH thương mại và sản xuất HQ</a>
                     </Link>
                     <Link href="/shop/cart">
-                        <a>Gio hang</a>
+                        <a>
+                            <span className="relative inline-block">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 18 18" fill="currentColor">
+                                    <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                                </svg>
+                                <span className="absolute top-1 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
+                                    10
+                                </span>
+                            </span>
+                        </a>
                     </Link>
                 </div>
             </div>
@@ -19,29 +29,51 @@ const Header = () => {
             <div className="">
                 <div className="mx-auto max-w-6xl justify-items-center grid md:grid-cols-5">
                     <div className="md:col-span-1">
-                        <Image src="/images/logo.png" alt="logo" height={130} width={130}/>
+                        <Image src="/images/logo.png" alt="logo" height={130} width={130} />
                     </div>
-                    <div className="md:col-span-3">b</div>
-                    <div className="md:col-span-1">c</div>
+                    <div className="flex w-full items-center md:col-span-3">
+                        <Script async src="https://cse.google.com/cse.js?cx=13a0dccfea6d6816a"></Script>
+                        <div className="w-full">
+                            <div className="gcse-searchbox-only"></div>
+                        </div>
+                    </div>
+                    <div className="md:col-span-1 flex flex-col justify-center">
+                        <div className="py-1">
+                            <p>Tư vấn mua hàng</p>
+                        </div>
+                        <div className="flex">
+                            <svg className="h-6 w-6 text-red-500" width="20" height="20" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />  <path d="M15 7a2 2 0 0 1 2 2" />  <path d="M15 3a6 6 0 0 1 6 6" /></svg>
+                            <span className="pl-1 text-red-500 font-semibold text-lg">0965 990 555</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             {/**Navbar */}
-            <div className="bg-gray-100">
-                <div className="flex mx-auto max-w-6xl py-2">
+            <div className="bg-blue-500">
+                <div className="flex mx-auto max-w-6xl py-2 text-white font-semibold">
                     <Link href="/">
                         <a className="pr-3">Trang chủ</a>
                     </Link>
-                    <Link href="/products">
-                        <a className="px-3">Tin tức</a>
+                    <Link href="/gioi-thieu.html">
+                        <a className="px-3">Giới thiệu</a>
                     </Link>
                     <Link href="/products">
                         <a className="px-3">Sản phẩm</a>
                     </Link>
                     <Link href="/products">
-                        <a className="px-3">Dịch vụ</a>
+                        <a className="px-3">Tin tức</a>
+                    </Link>
+                    <Link href="/products">
+                        <a className="px-3">Khách hàng</a>
                     </Link>
                     <Link href="/products">
                         <a className="px-3">Nhà sản xuất</a>
+                    </Link>
+                    <Link href="/products">
+                        <a className="px-3">Tuyển dụng</a>
+                    </Link>
+                    <Link href="/products">
+                        <a className="px-3">Dịch vụ</a>
                     </Link>
                     <Link href="/products">
                         <a className="px-3">Liên hệ</a>

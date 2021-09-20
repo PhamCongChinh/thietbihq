@@ -1,49 +1,22 @@
-const { 
-    PHASE_DEVELOPMENT_SERVER,
-    PHASE_PRODUCTION_BUILD,
-} = require('next/constants')
+module.exports = {
+    compress: false,
+    poweredByHeader: false,
+    generateEtags: false,
 
-module.exports = (phase) => {
-    // Dev mode bất kể giá trị STAGING
-    const isDev = phase === PHASE_DEVELOPMENT_SERVER
-    // Build được dùng
-    const isProd = phase === PHASE_PRODUCTION_BUILD && process.env.STAGING !== '1'
-    // Build được dùng
-    const isStaging = phase === PHASE_PRODUCTION_BUILD && process.env.STAGING === '1'
-
-    console.log(`isDev:${isDev}  isProd:${isProd}   isStaging:${isStaging}`)
-
-    const env = {
-        TITLE : (() => {
-            if(isDev) return 'DEVELOPMENT'
-            if(isProd) return 'PRODUCTION'
-            if(isStaging) return 'STAGING'
-        })()
-    }
-
-    /*const rewrites = async () => {
+    async rewrites() {
         return [
             {
-                source: '/san-pham.html',
-                destination: '/products',
-            }
+                source: '/gioi-thieu.html',
+                destination: '/introduce',
+            },
+            {
+                source: '/san-pham/:slug.html',
+                destination: '/products/:slug',
+            },
+            {
+                source: '/chi-tiet/:slug.html',
+                destination: '/product/:slug',
+            },
         ]
-    }*/
-
-    // Runtime config
-
-    const etag = () => {
-        return {
-            generateEtags: false,
-        }
-    }
-    const generateBuildId = async() => {
-        return 'HFtdnKMJ6sujqWmBNbFJs'
-    }
-    return {
-        env,
-        //rewrites,
-        etag,
-        generateBuildId
-    }
+    },
 }

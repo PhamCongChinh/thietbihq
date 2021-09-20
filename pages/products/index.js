@@ -1,8 +1,11 @@
 import React from 'react'
-import { sql_query } from '../../utils/db'
 import Layout from '../../components/Layout'
+import { getProducts } from '../../lib/api'
 import ProductsList from '../../components/ProductsList'
-const Products = ({ products }) => {
+
+const Products = () => {
+    const products = getProducts()
+    if(!products) return <div>Loading..</div>
     return (
         <div>
             <ProductsList products={products}/>
@@ -10,21 +13,13 @@ const Products = ({ products }) => {
     )
 }
 
-export async function getStaticProps(){
-    const results = await sql_query(
-        `SELECT * FROM products`
-    )
-    const products = Object.values(JSON.parse(JSON.stringify(results)))
-    return{
-        props: {
-            products
-        }
-    }
-}
-
 Products.getLayout = function getLayout(page){
+    const breadcrumb = [
+		{id: '', name: 'Trang chủ', slug: ''},
+        {id: '', name: 'Sản phẩm', slug: '/products'}
+	]
 	return (
-		<Layout>{page}</Layout>
+		<Layout breadcrumb={breadcrumb}>{page}</Layout>
 	)
 }
 export default Products

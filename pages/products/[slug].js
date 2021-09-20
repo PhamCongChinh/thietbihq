@@ -1,8 +1,9 @@
 import React from 'react'
 import Layout from '../../components/Layout'
 import ProductsList from '../../components/ProductsList'
-import { sql_query } from '../../utils/db'
-const ProductsByCategory = ({ products }) => {
+import { getCategory, getParamsCategory, getProductsByCategory } from '../../lib/query'
+
+const ProductsByCategory = ({ products, category }) => {
     return (
         <div>
             <ProductsList products={products}/>
@@ -11,37 +12,31 @@ const ProductsByCategory = ({ products }) => {
 }
 
 export const getStaticPaths = async () => {
-    const results = await sql_query(
-        `SELECT * FROM categories`
-    )
-    const categories = Object.values(JSON.parse(JSON.stringify(results)))
-    const paths = categories.map(item => ({
-        params: {
-            slug: `${item.slug}-${item.id}`
-        }
-    }))
+    const paths = await getParamsCategory()
     return {
         paths,
-        fallback: false, // Neu khong co trong props thi chuyen sang 404
+        fallback: false,
     }
 }
 
 export async function getStaticProps({ params }){
-    const arrSlug = params.slug.split('-')
-    const id = arrSlug[arrSlug.length - 1]
-    const results = await sql_query(
-        `SELECT * FROM products WHERE products.category_id = ${id}`
-    )
-    const products = Object.values(JSON.parse(JSON.stringify(results)))
+    const products = await getProductsByCategory(params.slug)
+    const category = await getCategory(params.slug)
     return{
         props: {
-            products
+            products,
+            category
         }
     }
 }
 ProductsByCategory.getLayout = function getLayout(page){
+    const breadcrumb = [
+		{id: '', name: 'Trang chủ', slug: ''},
+        {id: '', name: 'Sản phẩm', slug: '/products'},
+        page.props.category
+	]
 	return (
-		<Layout>{page}</Layout>
+		<Layout breadcrumb={breadcrumb}>{page}</Layout>
 	)
 }
 export default ProductsByCategory
