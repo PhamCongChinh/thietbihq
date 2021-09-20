@@ -1,11 +1,12 @@
 import Head from 'next/head'
-const SEO = ({ description, title, siteTitle }) => {
+const SEO = ({ description, title, siteTitle, keywords }) => {
     return (
         <Head>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             <meta charSet="utf-8" />
             <title>{`${title}`}</title>
             <meta name="description" content={description} />
+            <meta name="keywords" content={keywords} />
             <meta property="og:type" content="website" />
             <meta property="og:title" content={title} />
             <meta property="og:description" content={description} />

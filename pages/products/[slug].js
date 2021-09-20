@@ -25,17 +25,19 @@ export async function getStaticProps({ params }){
     return{
         props: {
             products,
-            category
+            category,
         }
     }
 }
 ProductsByCategory.getLayout = function getLayout(page){
+    const _SEO = page.props.category
     const {id, name, slug} = page.props.category
     const breadcrumb = [
         {name: name, url: `/san-pham/${slug}-${id}.html`}
 	]
+    
 	return (
-		<Layout breadcrumb={breadcrumb}>{page}</Layout>
+		<Layout breadcrumb={breadcrumb} _SEO={_SEO}>{page}</Layout>
 	)
 }
 export default ProductsByCategory

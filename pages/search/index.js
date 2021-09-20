@@ -12,7 +12,7 @@ const Search = () => {
 
 Search.getLayout = function getLayout(page){
 	const breadcrumb = [
-		{id: '', name: '', slug: ''},
+		{name: 'Tìm kiếm', url: '/search'},
 	]
 	return (
 		<Layout breadcrumb={breadcrumb}>{page}</Layout>

@@ -3,12 +3,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 const ProductDetail = ({ product }) => {
     return (
-        <div className="px-5">
+        <div className="text-gray-700">
             <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="md:col-span-1">
-                    <Image src={`/images/vang-anh.jpeg`} alt={product.name} height={240} width={240}/>
+                <div className="flex justify-center md:col-span-1 p-4">
+                    <Image src={`/images/vang-anh.jpeg`} alt={product.name} height={320} width={350}/>
                 </div>
-                <div className="md:col-span-1">
+                <div className="md:col-span-1 p-4">
                     <div className="border-b pb-2">
                         <h1 className="text-2xl">{product.name}</h1>
                     </div>
@@ -48,7 +48,7 @@ const ProductDetail = ({ product }) => {
                     </div>
                 </div>
             </div>
-            <div className="">
+            <div className="p-4">
                 <div className="border-b pb-2">
                     <p className="text-gray-700 font-semibold">Thông tin chi tiết</p>
                 </div>

@@ -2,14 +2,14 @@ import React from 'react'
 import Layout from '../../components/Layout'
 const Introduce = () => {
     return (
-        <div className="px-5 text-justify">
-            <h1 className="text-2xl font-semibold">Giới thiệu Công ty TNHH Thương Mại và Sản xuất HQ</h1>
+        <div className="p-4 text-justify text-base text-gray-700">
+            <h1 className="text-2xl">Giới thiệu Công ty TNHH Thương Mại và Sản xuất HQ</h1>
             <h2 className="text-lg font-semibold py-3">Tổng quan</h2>
-            <p>Công ty TNHH Thương Mại và Sản xuất HQ được thành lập do những kỹ sư, cử nhân 
+            <div>Công ty TNHH Thương Mại và Sản xuất HQ được thành lập do những kỹ sư, cử nhân 
                 tâm huyết mong muốn luôn đưa các sản phẩm mới nhất, các hãng nổi tiếng nghiên cứu chế tạo 
                 và đưa vào áp dụng trong thực tiễn nhằm giảm bớt sức lao động của con người, nâng cao hiệu quả trong sản xuất giảm chi phí tối đa cho doanh nghiệp.
                 Công ty hoạt động trong lĩnh vực <span className="text-blue-600">phân phối, bán lẻ </span>trực tiếp về các thiết bị công nghiệp...
-            </p>
+            </div>
             <h2 className="text-lg font-semibold py-3">Lợi ích</h2>
             <p className="pb-3">
                 <span className="text-blue-600">Sản phẩm đa dạng</span>: tìm tòi và nghiên cứu nhằm đem đến cho khách hàng những sản phẩm tốt và mới nhất

@@ -5,9 +5,9 @@ const Breadcrumb = ({ breadcrumb }) => {
     const router = useRouter()
     return (
         <div className="bg-white border">
-            <div className="max-w-6xl mx-auto px-3 md:px-0">
+            <div className="max-w-6xl mx-auto px-4 md:px-0">
                 {router.pathname === "/"? (""):(
-                    <ol className="flex pt-1 pb-2">
+                    <ol className="flex flex-wrap content-start pt-1 pb-1.5">
                         <li>
                             <Link href="/">
                                 <a className="text-sm text-gray-500">Trang chủ</a>

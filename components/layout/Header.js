@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <div id="header">
             {/**TOP */}
-            <div className="bg-gray-50 pt-1 border px-3 md:px-0">
+            <div className="bg-gray-50 pt-1 border px-4 md:px-0">
                 <div className="flex mx-auto max-w-6xl justify-between">
                     <Link href="/">
                         <a className="text-sm text-blue-500 font-normal cursor-pointer">Công ty TNHH thương mại và sản xuất HQ</a>
@@ -15,7 +15,7 @@ const Header = () => {
                     <Link href="/shop/cart">
                         <a>
                             <span className="relative inline-block">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-600" viewBox="0 0 18 18" fill="currentColor">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-500" viewBox="0 0 18 18" fill="currentColor">
                                     <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
                                 </svg>
                                 <span className="absolute top-1 right-0 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
@@ -32,7 +32,7 @@ const Header = () => {
                     <div className="md:col-span-1">
                         <Image src="/images/logo.png" alt="logo" height={130} width={130} />
                     </div>
-                    <div className="flex w-full items-center md:col-span-3 p-3 md:p-0">
+                    <div className="flex w-full items-center md:col-span-3 p-4 md:p-0">
                         <Script async src="https://cse.google.com/cse.js?cx=13a0dccfea6d6816a"></Script>
                         <div className="w-full">
                             <div className="gcse-searchbox-only"></div>
@@ -50,8 +50,8 @@ const Header = () => {
                 </div>
             </div>
             {/**Navbar */}
-            <div className="bg-blue-500 hidden md:flex">
-                <div className="flex mx-auto max-w-6xl py-3 text-white font-semibold">
+            <div className="bg-blue-500">
+                <div className="hidden md:flex mx-auto max-w-6xl py-3 text-white font-semibold">
                     <Link href="/">
                         <a className="pr-5">Trang chủ</a>
                     </Link>
