@@ -1,7 +1,7 @@
-import React from 'react'
 import Layout from '../../components/Layout'
-import { getProducts } from '../../lib/api'
 import ProductsList from '../../components/ProductsList'
+import { getProducts } from '../../lib/api'
+import { getProduct } from '../../lib/menu_query'
 
 const Products = () => {
     const products = getProducts()
@@ -13,12 +13,23 @@ const Products = () => {
     )
 }
 
+export async function getStaticProps(){
+    const product = await getProduct()
+    return{
+        props: {
+            product,
+        }
+    }
+}
+
 Products.getLayout = function getLayout(page){
+    const _SEO = page.props.product
     const breadcrumb = [
-        {name: 'Sản phẩm', url: '/san-pham.html'}
+        page.props.product
 	]
 	return (
-		<Layout breadcrumb={breadcrumb}>{page}</Layout>
+		<Layout _SEO={_SEO} breadcrumb={breadcrumb}>{page}</Layout>
 	)
 }
+
 export default Products

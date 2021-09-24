@@ -2,7 +2,6 @@ module.exports = {
     compress: false,
     poweredByHeader: false,
     generateEtags: false,
-
     async rewrites() {
         return [
             {
@@ -13,6 +12,7 @@ module.exports = {
                 source: '/san-pham.html',
                 destination: '/products',
             },
+            
             {
                 source: '/san-pham/:slug.html',
                 destination: '/products/:slug',

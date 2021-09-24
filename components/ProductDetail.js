@@ -1,12 +1,22 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../features/cart/cartSlice'
+
 const ProductDetail = ({ product }) => {
+    const item = {
+        id: product.id,
+        name: product.name,
+        image: product.image
+    }
+    const dispatch = useDispatch()
     return (
         <div className="text-gray-700">
             <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="flex justify-center md:col-span-1 p-4">
-                    <Image src={`/images/vang-anh.jpeg`} alt={product.name} height={320} width={350}/>
+                    <Image src={`/images/pr/${product.slug}.jpg`} alt={product.name} height={320} width={350}/>
                 </div>
                 <div className="md:col-span-1 p-4">
                     <div className="border-b pb-2">
@@ -32,14 +42,14 @@ const ProductDetail = ({ product }) => {
 
                     <div className="flex py-4">
                         <div className="flex-1 pr-1">
-                            <button className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                            <button onClick={() => dispatch(addToCart(item))} className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                                 Thêm giỏ hàng
                             </button>
                         </div>
                         <div className="flex-1 pl-1">
                             <Link href="/shop/cart">
                                 <a>
-                                <button className="w-full bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                                <button onClick={() => dispatch(addToCart(item))} className="w-full bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                                     Mua ngay
                                 </button>
                                 </a>

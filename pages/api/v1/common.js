@@ -17,7 +17,6 @@ const handler = async (_, res) => {
         const sellingProducts = await sql_query(
             `SELECT p.name, p.slug, p.image, p.id FROM products as p LIMIT 5`
         )
-        
         data.categories = categories
         data.newProducts = newProducts
         data.sellingProducts = sellingProducts

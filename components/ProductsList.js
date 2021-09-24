@@ -9,7 +9,7 @@ const ProductsList = ({ products }) => {
                     <Link href={`/chi-tiet/${item.slug}-${item.id}.html`}>
                         <a>
                             <div className="flex justify-center md:h-60 md:w-full">
-                                <Image src={'/images/vang-anh.jpeg'} alt={item.name} height={240} width={240}/>
+                                <Image src={`/images/pr/${item.slug}.jpg`} alt={item.name} height={240} width={240}/>
                             </div>
                             <div className="py-2 text-gray-800 text-sm">{item.name}</div>
                             <div className="text-red-500 font-semibold text-sm">Liên hệ</div>

@@ -1,9 +1,35 @@
-import React from 'react'
 import Layout from '../../components/Layout'
-const Introduce = () => {
+import { getIntroduce } from '../../lib/menu_query'
+const Introduce = ({introduce}) => {
     return (
         <div className="p-4 text-justify text-base text-gray-700">
-            <h1 className="text-2xl">Giới thiệu Công ty TNHH Thương Mại và Sản xuất HQ</h1>
+            <div dangerouslySetInnerHTML={{ __html: introduce.content }} />
+        </div>
+    )
+}
+export async function getStaticProps(){
+	const introduce = await getIntroduce()
+    return{
+        props: {
+			introduce,
+        }
+    }
+}
+
+Introduce.getLayout = function getLayout(page){
+    const _SEO = page.props.introduce
+    const breadcrumb = [
+		page.props.introduce
+	]
+    return (
+        <Layout _SEO={_SEO} breadcrumb={breadcrumb}>{page}</Layout>
+    )
+}
+
+export default Introduce
+
+/**
+ * <h1 className="text-2xl">Giới thiệu Công ty TNHH Thương Mại và Sản xuất HQ</h1>
             <h2 className="text-lg font-semibold py-3">Tổng quan</h2>
             <div>Công ty TNHH Thương Mại và Sản xuất HQ được thành lập do những kỹ sư, cử nhân 
                 tâm huyết mong muốn luôn đưa các sản phẩm mới nhất, các hãng nổi tiếng nghiên cứu chế tạo 
@@ -33,17 +59,4 @@ const Introduce = () => {
             <h3>Chi nhánh 2</h3>
             <p>Địa chỉ : Cầu 50 - Xuân Thượng - Xuân Trường - Nam Định</p>
             <p>Điện thoại : 0965 990 555 (Mr Hương)</p>
-        </div>
-    )
-}
-
-Introduce.getLayout = function getLayout(page){
-    const breadcrumb = [
-		{name: 'Giới thiệu', url: '/gioi-thieu.html'},
-	]
-    return (
-        <Layout breadcrumb={breadcrumb}>{page}</Layout>
-    )
-}
-
-export default Introduce
+ */

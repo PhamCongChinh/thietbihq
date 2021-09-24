@@ -13,7 +13,7 @@ const SidebarR = (props) => {
                     <Link key={item.id} href={`/chi-tiet/${item.slug}-${item.id}.html`}>
                         <a>
                             <div className="flex flex-row p-2 border-b border-r border-l cursor-pointer relative">
-                                <Image src={`/images/vang-anh.jpeg`} alt={item.name} height={60} width={60} />
+                                <Image src={`/images/pr/${item.slug}.jpg`} alt={item.name} height={60} width={60} />
                                 <p className="px-3 text-sm  text-gray-800">{item.name}</p>
                                 <p className="absolute bottom-1 right-1 font-semibold text-white text-xs bg-red-500 px-1.5 py-0.5">Chi tiết</p>
                             </div>

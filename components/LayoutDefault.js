@@ -1,13 +1,22 @@
 import React from 'react'
+import Breadcrumb from './Breadcrumb'
 import Footer from './layout/Footer'
 import Header from './layout/Header'
-const LayoutDefault = ({children}) => {
+
+import { Provider } from "react-redux"
+import store from "../store/store"
+import { ToastContainer } from 'react-toastify'
+const LayoutDefault = ({ children, breadcrumb }) => {
     return (
-        <div>
+        <Provider store={store}>
+            <ToastContainer limit={3}/>
             <Header/>
-            <main className="max-w-6xl mx-auto">{children}</main>
+            <Breadcrumb breadcrumb={breadcrumb}/>
+            <div className="my-5">
+                <main className="max-w-6xl mx-auto">{children}</main>
+            </div>
             <Footer/>
-        </div>
+        </Provider>
     )
 }
 export default LayoutDefault

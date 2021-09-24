@@ -1,4 +1,3 @@
-import React from 'react'
 import Layout from '../../components/Layout'
 import ProductsList from '../../components/ProductsList'
 import { getCategory, getParamsCategory, getProductsByCategory } from '../../lib/query'
@@ -6,6 +5,9 @@ import { getCategory, getParamsCategory, getProductsByCategory } from '../../lib
 const ProductsByCategory = ({ products, category }) => {
     return (
         <div>
+            <div className="px-4 py-3">
+                <h1 className="text-xl">{category.name}</h1>
+            </div>
             <ProductsList products={products}/>
         </div>
     )
@@ -37,7 +39,7 @@ ProductsByCategory.getLayout = function getLayout(page){
 	]
     
 	return (
-		<Layout breadcrumb={breadcrumb} _SEO={_SEO}>{page}</Layout>
+		<Layout _SEO={_SEO} breadcrumb={breadcrumb}>{page}</Layout>
 	)
 }
 export default ProductsByCategory

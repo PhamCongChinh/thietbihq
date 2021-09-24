@@ -3,7 +3,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Script from 'next/script'
 
+import { useSelector } from "react-redux"
+
 const Header = () => {
+    const cartTotalQuantity = useSelector((state) => state.cart.cartTotalQuantity)
     return (
         <div id="header">
             {/**TOP */}
@@ -19,7 +22,7 @@ const Header = () => {
                                     <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
                                 </svg>
                                 <span className="absolute top-1 right-0 inline-flex items-center justify-center px-1.5 py-0.5 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
-                                    6
+                                    {cartTotalQuantity}
                                 </span>
                             </span>
                         </a>
@@ -29,7 +32,7 @@ const Header = () => {
             {/**CENTER */}
             <div className="bg-white">
                 <div className="mx-auto max-w-6xl justify-items-center grid md:grid-cols-5">
-                    <div className="md:col-span-1">
+                    <div className="pt-4 md:pt-0 md:col-span-1">
                         <Image src="/images/logo.png" alt="logo" height={130} width={130} />
                     </div>
                     <div className="flex w-full items-center md:col-span-3 p-4 md:p-0">
@@ -52,7 +55,62 @@ const Header = () => {
             {/**Navbar */}
             <div className="bg-blue-500">
                 <div className="hidden md:flex mx-auto max-w-6xl py-3 text-white font-semibold">
-                    <Link href="/">
+                    <ul className="flex">
+                        <li className="pr-5">
+                            <Link href="/">
+                                <a>Trang chủ</a>
+                            </Link>
+                        </li>
+                        <li className="px-5">
+                            <Link href="/gioi-thieu.html">
+                                <a>Giới thiệu</a>
+                            </Link>
+                        </li>
+                        <li className="px-5">
+                            <Link href="/san-pham.html">
+                                <a>Sản phẩm</a>
+                            </Link>
+                        </li>
+                        <li className="px-5">
+                            <Link href="/">
+                                <a>Tin tức</a>
+                            </Link>
+                        </li>
+                        <li  className="px-5">
+                            <Link href="/">
+                                <a>Khách hàng</a>
+                            </Link>
+                        </li>
+                        <li  className="px-5">
+                            <Link href="/">
+                                <a>Nhà sản xuất</a>
+                            </Link>
+                        </li>
+                        <li className="px-5">
+                            <Link href="/">
+                                <a>Tuyển dụng</a>
+                            </Link>
+                        </li>
+                        <li className="px-5">
+                            <Link href="/">
+                                <a>Dịch vụ</a>
+                            </Link>
+                        </li>
+                        <li className="px-5">
+                            <Link href="/">
+                                <a>Liên hệ</a>
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Header
+/**
+ * <Link href="/">
                         <a className="pr-5">Trang chủ</a>
                     </Link>
                     <Link href="/gioi-thieu.html">
@@ -79,10 +137,4 @@ const Header = () => {
                     <Link href="/">
                         <a className="px-5">Liên hệ</a>
                     </Link>
-                </div>
-            </div>
-        </div>
-    )
-}
-
-export default Header
+ */

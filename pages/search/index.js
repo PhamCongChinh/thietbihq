@@ -1,6 +1,6 @@
-import React from 'react'
 import Script from 'next/script'
 import Layout from '../../components/Layout'
+
 const Search = () => {
     return (
         <div>
@@ -11,11 +11,16 @@ const Search = () => {
 }
 
 Search.getLayout = function getLayout(page){
+    const _SEO = {
+		meta_title: 'Tìm kiếm',
+		meta_description: "Cơ khí, điện nước, sơn Epoxy, thảm cầu lông, văn phòng, may mặc, khu công nghiệp Nam Định",
+		meta_keywords: "Cơ khí, điện nước, sơn Epoxy, thảm cầu lông, văn phòng, may mặc, khu công nghiệp Nam Định"
+	}
 	const breadcrumb = [
 		{name: 'Tìm kiếm', url: '/search'},
 	]
 	return (
-		<Layout breadcrumb={breadcrumb}>{page}</Layout>
+		<Layout _SEO={_SEO} breadcrumb={breadcrumb}>{page}</Layout>
 	)
 }
 
