@@ -12,8 +12,8 @@ const LayoutDefault = ({ children, breadcrumb }) => {
             <ToastContainer limit={3}/>
             <Header/>
             <Breadcrumb breadcrumb={breadcrumb}/>
-            <div className="my-5">
-                <main className="max-w-6xl mx-auto">{children}</main>
+            <div className="max-w-6xl mx-auto py-5 px-4 md:px-0">
+                <main>{children}</main>
             </div>
             <Footer/>
         </Provider>

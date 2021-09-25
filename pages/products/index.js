@@ -1,34 +1,39 @@
 import Layout from '../../components/Layout'
 import ProductsList from '../../components/ProductsList'
-import { getProducts } from '../../lib/api'
-import { getProduct } from '../../lib/menu_query'
+import { getProduct } from '../../lib/q_menu'
+import { getProducts } from '../../lib/query'
+import { getCommon } from '../../lib/q_common'
 
-const Products = () => {
-    const products = getProducts()
-    if(!products) return <div>Loading..</div>
+const Products = ({products}) => {
     return (
-        <div>
-            <ProductsList products={products}/>
-        </div>
+        <ProductsList products={products}/>
     )
 }
 
 export async function getStaticProps(){
+    const common = await getCommon()
     const product = await getProduct()
+    const products = await getProducts()
     return{
         props: {
+            common,
             product,
+            products,
         }
     }
 }
 
 Products.getLayout = function getLayout(page){
-    const _SEO = page.props.product
-    const breadcrumb = [
-        page.props.product
-	]
+    const data = {
+		SEO: page.props.product,
+		breadcrumb: [
+            page.props.product
+        ],
+		common: page.props.common
+	}
+    
 	return (
-		<Layout _SEO={_SEO} breadcrumb={breadcrumb}>{page}</Layout>
+		<Layout data={data}>{page}</Layout>
 	)
 }
 

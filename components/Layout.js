@@ -1,34 +1,31 @@
-import React from 'react'
 import Header from './layout/Header'
 import Breadcrumb from './Breadcrumb'
 import Sidebar from './layout/Sidebar'
 import SidebarR from './layout/SidebarR'
 import Footer from './layout/Footer'
+import SEO from './SEO'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { getCommon } from '../lib/api'
-import SEO from './SEO'
 
 import { Provider } from "react-redux"
 import store from "../store/store"
 import { ToastContainer } from 'react-toastify'
-const Layout = ({ children, breadcrumb, _SEO }) => {
+
+const Layout = ({ children, data }) => {
     const router = useRouter()
-    const common = getCommon()
     return (
         <Provider store={store}>
-            <ToastContainer limit={3}/>
             <div className="bg-gray-50">
                 <SEO
-                    title = {`${_SEO.meta_title}`}
+                    title = {`${data.SEO.meta_title}`}
                     siteTitle="https://thietbihq.com"
-                    description={`${_SEO.meta_description}`}
-                    keywords={`${_SEO.meta_keywords}`}
+                    description={`${data.SEO.meta_description}`}
+                    keywords={`${data.SEO.meta_keywords}`}
                 />
                 <Header/>
-                <Breadcrumb breadcrumb={breadcrumb}/>
+                <Breadcrumb breadcrumb={data.breadcrumb}/>
                 <div className="grid md:grid-cols-5 max-w-6xl mx-auto my-5 bg-white">
-                    <div className="md:col-span-1"><Sidebar {...common}/></div>
+                    <div className="md:col-span-1"><Sidebar {...data.common}/></div>
                     {router.pathname === '/' ? (
                         <>
                             <div className="md:col-span-4">
@@ -37,19 +34,20 @@ const Layout = ({ children, breadcrumb, _SEO }) => {
                                 </div>
                                 <div className="grid md:grid-cols-4">
                                     <main className="md:col-span-3">{children}</main>
-                                    <div className="md:col-span-1"><SidebarR {...common}/></div>
+                                    <div className="md:col-span-1"><SidebarR {...data.common}/></div>
                                 </div>
                             </div>
                         </>
                     ):(
                         <>
                             <main className="md:col-span-3">{children}</main>
-                            <div className="md:col-span-1"><SidebarR {...common}/></div>
+                            <div className="md:col-span-1"><SidebarR {...data.common}/></div>
                         </>
                     )}
                 </div>
                 <Footer/>
             </div>
+            <ToastContainer limit={3}/>
         </Provider>
     )
 }

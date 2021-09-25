@@ -8,11 +8,11 @@ const ProductsList = ({ products }) => {
                 <div key={item.id} className="relative hover:shadow-md p-3">
                     <Link href={`/chi-tiet/${item.slug}-${item.id}.html`}>
                         <a>
-                            <div className="flex justify-center md:h-60 md:w-full">
+                            <div className="flex justify-center md:h-56 md:w-full">
                                 <Image src={`/images/pr/${item.slug}.jpg`} alt={item.name} height={240} width={240}/>
                             </div>
-                            <div className="py-2 text-gray-800 text-sm">{item.name}</div>
-                            <div className="text-red-500 font-semibold text-sm">Liên hệ</div>
+                            <div className="py-2 text-gray-800 text-base">{item.name}</div>
+                            <div className="text-red-500 font-semibold text-base">Liên hệ</div>
                         </a>
                     </Link>
                 </div>

@@ -1,6 +1,6 @@
 import Script from 'next/script'
 import Layout from '../../components/Layout'
-
+import { getCommon } from '../../lib/q_common'
 const Search = () => {
     return (
         <div>
@@ -10,17 +10,29 @@ const Search = () => {
     )
 }
 
+export async function getStaticProps(){
+	const common = await getCommon()
+    return{
+        props: {
+			common,
+        }
+    }
+}
+
 Search.getLayout = function getLayout(page){
-    const _SEO = {
-		meta_title: 'Tìm kiếm',
-		meta_description: "Cơ khí, điện nước, sơn Epoxy, thảm cầu lông, văn phòng, may mặc, khu công nghiệp Nam Định",
-		meta_keywords: "Cơ khí, điện nước, sơn Epoxy, thảm cầu lông, văn phòng, may mặc, khu công nghiệp Nam Định"
+	const data = {
+		SEO: {
+			meta_title: 'Tìm kiếm',
+			meta_description: "Cơ khí, điện nước, sơn Epoxy, thảm cầu lông, văn phòng, may mặc, khu công nghiệp Nam Định",
+			meta_keywords: "Cơ khí, điện nước, sơn Epoxy, thảm cầu lông, văn phòng, may mặc, khu công nghiệp Nam Định"
+		},
+		breadcrumb: [
+            {name: 'Tìm kiếm', url: '/search'}
+        ],
+		common: page.props.common
 	}
-	const breadcrumb = [
-		{name: 'Tìm kiếm', url: '/search'},
-	]
 	return (
-		<Layout _SEO={_SEO} breadcrumb={breadcrumb}>{page}</Layout>
+		<Layout data={data}>{page}</Layout>
 	)
 }
 

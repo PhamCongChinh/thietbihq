@@ -13,7 +13,6 @@ const Checkout = () => {
         
     };
     return (
-        <div className="px-4 md:px-0">
             <div className="grid md:grid-cols-2">
                 <div className="md:grid-cols-1">
                     <div className="flex items-center mb-5 border-b-2 pb-2">
@@ -106,7 +105,6 @@ const Checkout = () => {
                         </form>
                     </div>
                 </div>
-        </div>
     )
 }
 

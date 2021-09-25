@@ -12,7 +12,14 @@ module.exports = {
                 source: '/san-pham.html',
                 destination: '/products',
             },
-            
+            {
+                source: '/tin-tuc.html',
+                destination: '/news',
+            },
+            {
+                source: '/tin-tuc/:slug.html',
+                destination: '/news/:slug',
+            },
             {
                 source: '/san-pham/:slug.html',
                 destination: '/products/:slug',

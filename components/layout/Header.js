@@ -1,19 +1,93 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Script from 'next/script'
-
 import { useSelector } from "react-redux"
-
+import { getCategories } from '../../lib/api'
 const Header = () => {
     const cartTotalQuantity = useSelector((state) => state.cart.cartTotalQuantity)
+    const categories = getCategories()
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(false)
     return (
         <div id="header">
-            {/**TOP */}
-            <div className="bg-gray-50 pt-1 border px-4 md:px-0">
-                <div className="flex mx-auto max-w-6xl justify-between">
+            {/** Open Sidebar */}
+            <div
+                onClick={() => setIsSidebarOpen(false)}
+                className={`fixed inset-0 z-20 block transition-opacity bg-black opacity-50 lg:hidden ${isSidebarOpen ? "block" : "hidden"}`}
+            />
+            <div
+                className={`fixed bg-white inset-y-0 left-0 z-30 w-64 overflow-y-auto transition duration-300 ease-out transform translate-x-0  lg:translate-x-0 lg:static lg:inset-0 md:hidden ${isSidebarOpen ? "ease-out translate-x-0" : "ease-in -translate-x-full"}`}
+            >
+                <div className="flex flex-col items-start text-lg text-gray-700">
                     <Link href="/">
-                        <a className="text-sm text-blue-500 font-normal cursor-pointer">Công ty TNHH thương mại và sản xuất HQ</a>
+                        <a>
+                            <button className="pt-3 px-6" onClick={() => setIsSidebarOpen(false)}>Trang chủ</button>
+                        </a>
+                    </Link>
+                    <Link href="/gioi-thieu.html">
+                        <a>
+                            <button className="pt-3 px-6" onClick={() => setIsSidebarOpen(false)}>Giới thiệu</button>
+                        </a>
+                    </Link>
+                    <button className="pt-3 pl-6 w-full flex justify-between" onClick={() => setIsOpen(true)}>
+                        <div>Sản phẩm</div>
+                        <div>
+                            <svg className="h-7 w-8 text-gray-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">  <polyline points="6 9 12 15 18 9" /></svg>
+                        </div>
+                    </button>
+                    <div className={`bg-gray-50 w-full ${isOpen ? "block" : "hidden"}`}>
+						{categories?.map(item => (
+							<div key={item.id} className="pt-1">
+								<Link href={`/san-pham/${item.slug}-${item.id}.html`}>
+									<a className="text-base text-gray-600 pl-6 cursor-pointer" onClick={() => setIsSidebarOpen(false)}>{item.name}</a>
+								</Link>
+							</div>
+						))}
+					</div>
+                    <Link href="/tin-tuc.html" className="" >
+                        <a>
+                            <button className="pt-3 px-6" onClick={() => setIsSidebarOpen(false)}>Tin tức</button>
+                        </a>
+                    </Link>
+                    <Link href="/khach-hang.html" className="">
+                        <a>
+                            <button className="pt-3 px-6" onClick={() => setIsSidebarOpen(false)}>Khách hàng</button>
+                        </a>
+                    </Link>
+                    <Link href="/nha-san-xuat.html" className="">
+                        <a>
+                            <button className="pt-3 px-6" onClick={() => setIsSidebarOpen(false)}>Nhà sản xuất</button>
+                        </a>
+                    </Link>
+                    <Link href="/tuyen-dung.html" className="">
+                        <a>
+                            <button className="pt-3 px-6" onClick={() => setIsSidebarOpen(false)}>Tuyển dụng</button>
+                        </a>
+                    </Link>
+                    <Link href="/dich-vu.html" className="">
+                        <a>
+                            <button className="pt-3 px-6" onClick={() => setIsSidebarOpen(false)}>Dịch vụ</button>
+                        </a>
+                    </Link>
+                    <Link href="/lien-he.html" className="" >
+                        <a>
+                            <button className="pt-3 px-6" onClick={() => setIsSidebarOpen(false)}>Liên hệ</button>
+                        </a>
+                    </Link>
+                </div>
+            </div>
+            {/**TOP */}
+            <div className="w-full fixed z-10 bg-gray-50 pt-1 border px-4 md:px-0">
+                <div className="flex mx-auto max-w-6xl justify-between">
+                    {/**Tab */}
+                    <div className="md:hidden flex cursor-pointer" onClick={() => setIsSidebarOpen(true)}>
+                        <svg className="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </div>
+                    <Link href="/">
+                        <a className="text-sm text-gray-700 font-normal cursor-pointer">Công ty TNHH thương mại và sản xuất HQ</a>
                     </Link>
                     <Link href="/shop/cart">
                         <a>
@@ -30,7 +104,7 @@ const Header = () => {
                 </div>
             </div>
             {/**CENTER */}
-            <div className="bg-white">
+            <div className="bg-white pt-8">
                 <div className="mx-auto max-w-6xl justify-items-center grid md:grid-cols-5">
                     <div className="pt-4 md:pt-0 md:col-span-1">
                         <Image src="/images/logo.png" alt="logo" height={130} width={130} />
@@ -72,16 +146,16 @@ const Header = () => {
                             </Link>
                         </li>
                         <li className="px-5">
-                            <Link href="/">
+                            <Link href="/tin-tuc.html">
                                 <a>Tin tức</a>
                             </Link>
                         </li>
-                        <li  className="px-5">
+                        <li className="px-5">
                             <Link href="/">
                                 <a>Khách hàng</a>
                             </Link>
                         </li>
-                        <li  className="px-5">
+                        <li className="px-5">
                             <Link href="/">
                                 <a>Nhà sản xuất</a>
                             </Link>
@@ -109,32 +183,3 @@ const Header = () => {
 }
 
 export default Header
-/**
- * <Link href="/">
-                        <a className="pr-5">Trang chủ</a>
-                    </Link>
-                    <Link href="/gioi-thieu.html">
-                        <a className="px-5">Giới thiệu</a>
-                    </Link>
-                    <Link href="/san-pham.html">
-                        <a className="px-5">Sản phẩm</a>
-                    </Link>
-                    <Link href="/">
-                        <a className="px-5">Tin tức</a>
-                    </Link>
-                    <Link href="/">
-                        <a className="px-5">Khách hàng</a>
-                    </Link>
-                    <Link href="/">
-                        <a className="px-5">Nhà sản xuất</a>
-                    </Link>
-                    <Link href="/">
-                        <a className="px-5">Tuyển dụng</a>
-                    </Link>
-                    <Link href="/">
-                        <a className="px-5">Dịch vụ</a>
-                    </Link>
-                    <Link href="/">
-                        <a className="px-5">Liên hệ</a>
-                    </Link>
- */

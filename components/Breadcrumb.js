@@ -14,7 +14,7 @@ const Breadcrumb = ({ breadcrumb }) => {
                             </Link>
                         </li>
                         {breadcrumb.map((item, index) => (
-                            <li key={index} className="">
+                            <li key={index}>
                                 <Link href={`${item.url}`}>
                                     <a className="text-sm text-gray-500">
                                         <span className="px-2">/</span>

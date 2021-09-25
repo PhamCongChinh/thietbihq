@@ -6,7 +6,7 @@ const Sidebar = (props) => {
     const sellingProducts = props.sellingProducts
     return (
         <div className="hidden md:grid">
-            <div className="bg-blue-500 text-center text-sm text-white py-2">
+            <div className="bg-gray-100 text-center text-sm text-gray-600 py-2">
                 <p className="font-semibold">Danh mục sản phẩm</p>
             </div>
             {categories ? (
@@ -18,7 +18,7 @@ const Sidebar = (props) => {
                     </div>
                 ))
             ) : ('')}
-            <div className="bg-blue-500 text-center text-sm text-white py-2">
+            <div className="bg-gray-100 text-center text-sm text-gray-600 py-2">
                 <p className="font-semibold">Bán chạy nhất</p>
             </div>
             {sellingProducts ? (
@@ -39,9 +39,3 @@ const Sidebar = (props) => {
 }
 
 export default React.memo(Sidebar)
-
-/**
- * <div className="bg-blue-500 text-center text-sm text-white py-2">
-                <p className="font-semibold">Danh mục sản phẩm</p>
-            </div>
- */

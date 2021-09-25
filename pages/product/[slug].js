@@ -1,13 +1,11 @@
-import React from 'react'
 import Layout from '../../components/Layout'
 import ProductDetail from '../../components/ProductDetail'
 import { getCategoryByProduct, getParamsProduct, getProduct } from '../../lib/query'
+import { getCommon } from '../../lib/q_common'
 
-const Product = ({ product, category }) => {
+const Product = ({ product }) => {
     return (
-        <div>
-            <ProductDetail product={product}/>
-        </div>
+        <ProductDetail product={product}/>
     )
 }
 
@@ -20,10 +18,12 @@ export const getStaticPaths = async () => {
 }
 
 export async function getStaticProps({ params }){
+    const common = await getCommon()
     const product = await getProduct(params.slug)
     const category = await getCategoryByProduct(params.slug)
     return{
         props: {
+            common,
             product,
             category,
         }
@@ -31,17 +31,16 @@ export async function getStaticProps({ params }){
 }
 
 Product.getLayout = function getLayout(page){
-    const _SEO = {
-		meta_title: 'Thiết bị HQ - Thiết bị cơ khí, ngành may mặc, công nghiệp Nam Định',
-		meta_description: "Cơ khí, điện nước, sơn Epoxy, thảm cầu lông, văn phòng, may mặc, khu công nghiệp Nam Định",
-		meta_keywords: "Cơ khí, điện nước, sơn Epoxy, thảm cầu lông, văn phòng, may mặc, khu công nghiệp Nam Định"
+    const data = {
+		SEO: page.props.product,
+		breadcrumb: [
+            {name: page.props.category.name, url: `/san-pham/${page.props.category.slug}-${page.props.category.id}.html`},
+            {name: page.props.product.name, url: `/chi-tiet/${page.props.product.slug}-${page.props.product.id}.html`},
+        ],
+		common: page.props.common
 	}
-    const breadcrumb = [
-        {name: page.props.category.name, url: `/san-pham/${page.props.category.slug}-${page.props.category.id}.html`},
-        {name: page.props.product.name, url: `/chi-tiet/${page.props.product.slug}-${page.props.product.id}.html`},
-	]
 	return (
-		<Layout _SEO={_SEO} breadcrumb={breadcrumb}>{page}</Layout>
+		<Layout data={data}>{page}</Layout>
 	)
 }
 

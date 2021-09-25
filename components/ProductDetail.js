@@ -9,7 +9,7 @@ const ProductDetail = ({ product }) => {
     const item = {
         id: product.id,
         name: product.name,
-        image: product.image
+        slug: product.slug
     }
     const dispatch = useDispatch()
     return (
@@ -60,7 +60,7 @@ const ProductDetail = ({ product }) => {
             </div>
             <div className="p-4">
                 <div className="border-b pb-2">
-                    <p className="text-gray-700 font-semibold">Thông tin chi tiết</p>
+                    <p className="text-gray-600 font-semibold">Thông tin chi tiết</p>
                 </div>
                 <div className="py-4" dangerouslySetInnerHTML={{ __html: product.description }} />
             </div>

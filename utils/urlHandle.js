@@ -1,5 +1,5 @@
-export const UrlHandle = (url) => {
-    const urlArray = url.split('-').join('.').split('.')
-    const id = urlArray[urlArray.length-2]
+export const UrlHandle = (slug) => {
+    const arrSlug = slug.split('-')
+    const id = arrSlug[arrSlug.length - 1]
     return id
 }

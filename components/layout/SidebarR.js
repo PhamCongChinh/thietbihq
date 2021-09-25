@@ -5,7 +5,7 @@ const SidebarR = (props) => {
     const newProducts = props.newProducts
     return (
         <div className="px-4 md:px-0">
-            <div className="bg-blue-500 text-center text-sm text-white py-2">
+            <div className="bg-gray-100 text-center text-sm text-gray-600 py-2">
                 <p className="font-semibold">Sản phẩm mới</p>
             </div>
             {newProducts ? (
