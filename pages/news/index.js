@@ -4,15 +4,15 @@ import { getCommon } from '../../lib/q_common'
 import { getNews, getNewsDetail } from '../../lib/q_menu'
 const News = ({news_detail}) => {
     return (
-        <div className="p-4 text-justify text-base text-gray-700">
+        <div className="p-4 text-justify text-sm leading-6 text-gray-800">
             {news_detail.map(item => (
                 <div key={item.id}>
                     <Link href={`/tin-tuc/${item.slug}-${item.id}.html`}>
-                        <a className="text-blue-500">
+                        <a className="text-gray-800 text-base">
                             <div>{item.name}</div>
                         </a>
                     </Link>
-                    <div className="overflow-hidden h-24 text-sm text-gray-600">{item.content}</div>
+                    <div className="overflow-hidden h-24 text-sm leading-6 text-gray-600">{item.content}</div>
                 </div>
             ))}
         </div>

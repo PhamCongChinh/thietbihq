@@ -4,7 +4,7 @@ import { getCommon } from '../../lib/q_common'
 
 const Introduce = ({introduce}) => {
     return (
-        <div className="p-4 text-justify text-base text-gray-700">
+        <div className="p-4 text-justify text-sm leading-6 text-gray-800">
             <div dangerouslySetInnerHTML={{ __html: introduce.content }} />
         </div>
     )

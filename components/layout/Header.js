@@ -87,7 +87,7 @@ const Header = () => {
                         </svg>
                     </div>
                     <Link href="/">
-                        <a className="text-sm text-gray-700 font-normal cursor-pointer">Công ty TNHH thương mại và sản xuất HQ</a>
+                        <a className="text-sm text-blue-500 font-normal cursor-pointer">Công ty TNHH thương mại và sản xuất HQ</a>
                     </Link>
                     <Link href="/shop/cart">
                         <a>

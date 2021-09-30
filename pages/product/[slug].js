@@ -1,11 +1,20 @@
 import Layout from '../../components/Layout'
 import ProductDetail from '../../components/ProductDetail'
-import { getCategoryByProduct, getParamsProduct, getProduct } from '../../lib/query'
+import ProductsList from '../../components/ProductsList'
+import { getCategoryByProduct, getParamsProduct, getProduct, getRelatedProducts } from '../../lib/query'
 import { getCommon } from '../../lib/q_common'
 
-const Product = ({ product }) => {
+const Product = ({ product, relatedProducts }) => {
     return (
+        <>
         <ProductDetail product={product}/>
+        <div className="px-4">
+            <div className="text-base font-semibold text-gray-700 py-3 border-b">
+                <p>Sản phẩm tương tự</p>
+            </div>
+        </div>
+        <ProductsList products={relatedProducts}/>
+        </>
     )
 }
 
@@ -21,11 +30,13 @@ export async function getStaticProps({ params }){
     const common = await getCommon()
     const product = await getProduct(params.slug)
     const category = await getCategoryByProduct(params.slug)
+    const relatedProducts = await getRelatedProducts(category.id)
     return{
         props: {
             common,
             product,
             category,
+            relatedProducts,
         }
     }
 }

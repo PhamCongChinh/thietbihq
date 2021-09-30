@@ -5,7 +5,7 @@ import { getNewsDetailById, getParamsNewsDetail } from '../../lib/q_menu'
 
 const NewsDetail = ({news_detail_by_id}) => {
     return (
-        <div className="p-4 text-justify text-base text-gray-700">
+        <div className="p-4 text-justify text-sm leading-6 text-gray-700">
             {news_detail_by_id.content}
         </div>
     )
