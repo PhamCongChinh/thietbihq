@@ -18,7 +18,7 @@ export const getStaticPaths = async () => {
     const paths = await getParamsCategory()
     return {
         paths,
-        fallback: false,
+        fallback: 'blocking',
     }
 }
 
@@ -31,7 +31,8 @@ export async function getStaticProps({ params }){
             common,
             products,
             category,
-        }
+        },
+        revalidate: 10,
     }
 }
 ProductsByCategory.getLayout = function getLayout(page){

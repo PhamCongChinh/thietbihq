@@ -28,6 +28,26 @@ module.exports = {
                 source: '/chi-tiet/:slug.html',
                 destination: '/product/:slug',
             },
+            {
+                source: '/khach-hang.html',
+                destination: '/customer',
+            },
+            {
+                source: '/nha-san-xuat.html',
+                destination: '/producer',
+            },
+            {
+                source: '/tuyen-dung.html',
+                destination: '/recruitment',
+            },
+            {
+                source: '/dich-vu.html',
+                destination: '/service',
+            },
+            {
+                source: '/lien-he.html',
+                destination: '/contact',
+            },
         ]
     },
 }

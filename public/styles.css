@@ -14,3 +14,18 @@ form .gsc-search-button{
 form .gsc-search-button-v2{
     padding: 10px 14px;
 }
+
+.pagination{
+    display: flex;
+  }
+  .pagination li{
+    padding:3px 10px;
+    border-radius: 3px;
+  }
+  .active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  .prevnext{
+    background-color: aqua;
+  }

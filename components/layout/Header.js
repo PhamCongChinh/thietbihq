@@ -151,27 +151,27 @@ const Header = () => {
                             </Link>
                         </li>
                         <li className="px-5">
-                            <Link href="/">
+                            <Link href="/khach-hang.html">
                                 <a>Khách hàng</a>
                             </Link>
                         </li>
                         <li className="px-5">
-                            <Link href="/">
+                            <Link href="/nha-san-xuat.html">
                                 <a>Nhà sản xuất</a>
                             </Link>
                         </li>
                         <li className="px-5">
-                            <Link href="/">
+                            <Link href="/tuyen-dung.html">
                                 <a>Tuyển dụng</a>
                             </Link>
                         </li>
                         <li className="px-5">
-                            <Link href="/">
+                            <Link href="/dich-vu.html">
                                 <a>Dịch vụ</a>
                             </Link>
                         </li>
                         <li className="px-5">
-                            <Link href="/">
+                            <Link href="/lien-he.html">
                                 <a>Liên hệ</a>
                             </Link>
                         </li>

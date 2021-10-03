@@ -5,16 +5,14 @@ import { getNewsDetailById, getParamsNewsDetail } from '../../lib/q_menu'
 
 const NewsDetail = ({news_detail_by_id}) => {
     return (
-        <div className="p-4 text-justify text-sm leading-6 text-gray-700">
-            {news_detail_by_id.content}
-        </div>
+        <div className="p-4 text-justify text-sm leading-6 text-gray-800" dangerouslySetInnerHTML={{ __html: news_detail_by_id.content }}/>
     )
 }
 export const getStaticPaths = async () => {
     const paths = await getParamsNewsDetail()
     return {
         paths,
-        fallback: false,
+        fallback: 'blocking',
     }
 }
 export async function getStaticProps({ params }){
@@ -24,7 +22,8 @@ export async function getStaticProps({ params }){
         props: {
             common,
             news_detail_by_id,
-        }
+        },
+        revalidate: 10,
     }
 }
 NewsDetail.getLayout = function getLayout(page){

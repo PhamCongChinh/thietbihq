@@ -2,8 +2,10 @@ import Link from 'next/link'
 import Layout from '../../components/Layout'
 import { getCommon } from '../../lib/q_common'
 import { getNews, getNewsDetail } from '../../lib/q_menu'
-const News = ({news_detail}) => {
+const News = ({news, news_detail}) => {
     return (
+        <>
+        <div className="p-4 text-justify text-sm leading-6 text-gray-800" dangerouslySetInnerHTML={{ __html: news.content }}/>
         <div className="p-4 text-justify text-sm leading-6 text-gray-800">
             {news_detail.map(item => (
                 <div key={item.id}>
@@ -16,6 +18,7 @@ const News = ({news_detail}) => {
                 </div>
             ))}
         </div>
+        </>
     )
 }
 

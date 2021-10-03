@@ -1,5 +1,7 @@
 import React from 'react'
 import LayoutDefault from '../../components/LayoutDefault'
+import axios from 'axios'
+import { useRouter } from 'next/router'
 import { useForm } from "react-hook-form"
 import { toast, Slide } from 'react-toastify'
 import { useSelector, useDispatch } from 'react-redux'
@@ -7,10 +9,31 @@ import { clearCart } from '../../features/cart/cartSlice'
 const Checkout = () => {
     const cartItems = useSelector(state => state.cart.cartItems)
     const dispatch = useDispatch()
+    const router = useRouter()
     const { register, handleSubmit, formState: { errors } } = useForm()
     const onSubmit = async (data, e) => {
         e.target.reset()
-        
+        const res = await axios({
+            method: "POST",
+            url: "/api/v1/mail",
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            data
+        })
+        if(res.status === 200){
+            dispatch(clearCart())
+            router.push("/shop/success")
+            toast.success(`Xác nhận đơn hàng thành công`,{
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: true,
+                theme: 'colored',
+                transition: Slide,
+            })
+        }
+        return res
     };
     return (
             <div className="grid md:grid-cols-2">
@@ -40,33 +63,33 @@ const Checkout = () => {
                 </div>
                 <div className="md:grid-cols-1">
                     <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-2xl">
-                            {cartItems?.map((item, index) => (
-                                <div key={index}>
-                                    <input type="hidden" {...register(`product${index}`, { required: true, })} defaultValue={item.name} />
-                                    <input type="hidden" {...register(`quantity${index}`, { required: true, })} defaultValue={item.cartQuantity} />
-                                </div>
-                            ))}
-                            <div className="md:flex md:items-center mb-6">
-                                <div className="md:w-1/3">
-                                    <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                                        Họ tên <span className="text-red-500">*</span>
-                                    </label>
-                                </div>
-                                <div className="md:w-2/3">
-                                    <input {...register("name", { required: true, maxLength: 50 })} className="border border-gray-300 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" type="text"/>
-                                    {errors.name?.type === 'maxLength' && "Giới hạn tối đa 50 ký tự"}
-                                </div>
+                        {cartItems?.map((item, index) => (
+                            <div key={index}>
+                                <input type="hidden" {...register(`product${index}`, { required: true, })} defaultValue={item.name} />
+                                <input type="hidden" {...register(`quantity${index}`, { required: true, })} defaultValue={item.cartQuantity} />
                             </div>
-                            <div className="md:flex md:items-center mb-6">
-                                <div className="md:w-1/3">
-                                    <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-                                        Email <span className="text-red-500">*</span>
-                                    </label>
-                                </div>
-                                <div className="md:w-2/3">
-                                    <input {...register("email", { required: true, pattern:/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ })} className="border border-gray-300 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" type="email"/>
-                                    {errors.name?.type === 'pattern' && "Định dạng email không đúng, ví dụ abc@gmail.com"}
-                                </div>
+                        ))}
+                        <div className="md:flex md:items-center mb-6">
+                            <div className="md:w-1/3">
+                                <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+                                    Họ tên <span className="text-red-500">*</span>
+                                </label>
+                            </div>
+                            <div className="md:w-2/3">
+                                <input {...register("name", { required: true, maxLength: 50 })} className="border border-gray-300 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" type="text"/>
+                                {errors.name?.type === 'maxLength' && "Giới hạn tối đa 50 ký tự"}
+                            </div>
+                        </div>
+                        <div className="md:flex md:items-center mb-6">
+                            <div className="md:w-1/3">
+                                <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+                                    Email <span className="text-red-500">*</span>
+                                </label>
+                            </div>
+                            <div className="md:w-2/3">
+                                <input {...register("email", { required: true, pattern:/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ })} className="border border-gray-300 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" type="email"/>
+                                {errors.name?.type === 'pattern' && "Định dạng email không đúng, ví dụ abc@gmail.com"}
+                            </div>
                             </div>
                             <div className="md:flex md:items-center mb-6">
                                 <div className="md:w-1/3">

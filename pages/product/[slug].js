@@ -22,7 +22,7 @@ export const getStaticPaths = async () => {
     const paths = await getParamsProduct()
     return {
         paths,
-        fallback: false,
+        fallback: 'blocking',
     }
 }
 
@@ -37,7 +37,8 @@ export async function getStaticProps({ params }){
             product,
             category,
             relatedProducts,
-        }
+        },
+        revalidate: 10,
     }
 }
 

@@ -19,7 +19,7 @@ export async function getStaticProps(){
 			common,
 			home,
 			products,
-        }
+        },
     }
 }
 

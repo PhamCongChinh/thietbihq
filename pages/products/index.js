@@ -6,7 +6,13 @@ import { getCommon } from '../../lib/q_common'
 
 const Products = ({products}) => {
     return (
-        <ProductsList products={products}/>
+        <>
+            <div className="px-4 py-3">
+                <h1 className="text-xl text-gray-800">Sản phẩm</h1>
+            </div>
+            <ProductsList products={products}/>
+        </>
+        
     )
 }
 
@@ -27,11 +33,10 @@ Products.getLayout = function getLayout(page){
     const data = {
 		SEO: page.props.product,
 		breadcrumb: [
-            page.props.product
+            {name: page.props.product.name, url: `/${page.props.product.slug}.html`}
         ],
 		common: page.props.common
 	}
-    
 	return (
 		<Layout data={data}>{page}</Layout>
 	)
