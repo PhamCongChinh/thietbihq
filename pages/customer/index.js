@@ -14,7 +14,8 @@ export async function getStaticProps(){
         props: {
 			common,
             customer
-        }
+        },
+        revalidate: 10,
     }
 }
 Customer.getLayout = function getLayout(page){

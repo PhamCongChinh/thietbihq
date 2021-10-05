@@ -25,7 +25,8 @@ export async function getStaticProps(){
             common,
             product,
             products,
-        }
+        },
+        revalidate: 10,
     }
 }
 

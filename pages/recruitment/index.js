@@ -14,7 +14,8 @@ export async function getStaticProps(){
         props: {
 			common,
             recruitment
-        }
+        },
+        revalidate: 10,
     }
 }
 Recruitment.getLayout = function getLayout(page){

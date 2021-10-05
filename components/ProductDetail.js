@@ -15,8 +15,8 @@ const ProductDetail = ({ product }) => {
     return (
         <div className="text-gray-700 leading-6">
             <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="flex justify-center md:col-span-1 p-4">
-                    <Image src={`/images/pr/${product.slug}.jpg`} alt={product.name} height={320} width={350}/>
+                <div className="flex justify-center md:col-span-1 p-4 max-h-80">
+                    <Image src={`/images/pr/${product.slug}.jpg`} alt={product.name} height={300} width={300}/>
                 </div>
                 <div className="md:col-span-1 p-4">
                     <div className="border-b pb-3">

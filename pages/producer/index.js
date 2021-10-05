@@ -14,7 +14,8 @@ export async function getStaticProps(){
         props: {
 			common,
             producer
-        }
+        },
+        revalidate: 10,
     }
 }
 Producer.getLayout = function getLayout(page){

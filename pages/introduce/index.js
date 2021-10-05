@@ -16,7 +16,8 @@ export async function getStaticProps(){
         props: {
             common,
 			introduce,
-        }
+        },
+        revalidate: 10,
     }
 }
 

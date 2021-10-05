@@ -8,17 +8,10 @@ module.exports = {
                 source: '/gioi-thieu.html',
                 destination: '/introduce',
             },
+            
             {
                 source: '/san-pham.html',
                 destination: '/products',
-            },
-            {
-                source: '/tin-tuc.html',
-                destination: '/news',
-            },
-            {
-                source: '/tin-tuc/:slug.html',
-                destination: '/news/:slug',
             },
             {
                 source: '/san-pham/:slug.html',
@@ -28,6 +21,16 @@ module.exports = {
                 source: '/chi-tiet/:slug.html',
                 destination: '/product/:slug',
             },
+
+            {
+                source: '/tin-tuc.html',
+                destination: '/news',
+            },
+            {
+                source: '/tin-tuc/:slug.html',
+                destination: '/news/:slug',
+            },
+
             {
                 source: '/khach-hang.html',
                 destination: '/customer',

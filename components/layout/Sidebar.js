@@ -11,7 +11,7 @@ const Sidebar = (props) => {
             </div>
             {categories ? (
                 categories.map(item => (
-                    <div key={item.id} className="py-1.5 px-3 border-b border-l border-r text-gray-800 text-sm cursor-pointer hover:bg-gray-50">
+                    <div key={item.id} className="py-1.5 px-3 border-b border-l border-r text-800 text-sm cursor-pointer hover:bg-gray-50">
                         <Link href={`/san-pham/${item.slug}-${item.id}.html`}>
                             <a>{item.name}</a>
                         </Link>

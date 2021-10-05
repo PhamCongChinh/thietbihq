@@ -31,7 +31,8 @@ export async function getStaticProps(){
 			common,
 			news,
             news_detail
-        }
+        },
+        revalidate: 10,
     }
 }
 

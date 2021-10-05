@@ -14,7 +14,8 @@ export async function getStaticProps(){
         props: {
 			common,
             contact
-        }
+        },
+        revalidate: 10,
     }
 }
 Contact.getLayout = function getLayout(page){

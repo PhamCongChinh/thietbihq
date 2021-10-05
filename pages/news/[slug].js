@@ -8,6 +8,7 @@ const NewsDetail = ({news_detail_by_id}) => {
         <div className="p-4 text-justify text-sm leading-6 text-gray-800" dangerouslySetInnerHTML={{ __html: news_detail_by_id.content }}/>
     )
 }
+
 export const getStaticPaths = async () => {
     const paths = await getParamsNewsDetail()
     return {
@@ -15,6 +16,7 @@ export const getStaticPaths = async () => {
         fallback: 'blocking',
     }
 }
+
 export async function getStaticProps({ params }){
     const common = await getCommon()
     const news_detail_by_id = await getNewsDetailById(params.slug)
@@ -26,6 +28,7 @@ export async function getStaticProps({ params }){
         revalidate: 10,
     }
 }
+
 NewsDetail.getLayout = function getLayout(page){
 	const data = {
 		SEO: page.props.news_detail_by_id,
@@ -39,4 +42,5 @@ NewsDetail.getLayout = function getLayout(page){
 		<Layout data={data}>{page}</Layout>
 	)
 }
+
 export default NewsDetail

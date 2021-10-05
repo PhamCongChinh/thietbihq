@@ -1,1 +1,1 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+image : /_next/image?url=%2Fimages%2Fpr%2F{slug}.jpg&w=640&q=75

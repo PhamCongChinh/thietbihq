@@ -20,6 +20,7 @@ export async function getStaticProps(){
 			home,
 			products,
         },
+		revalidate: 10,
     }
 }
 
