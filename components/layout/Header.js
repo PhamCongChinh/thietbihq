@@ -110,9 +110,9 @@ const Header = () => {
                         <Image src="/images/logo.png" alt="logo" height={130} width={130} />
                     </div>
                     <div className="flex w-full items-center md:col-span-3 p-4 md:p-0">
-                        <Script async src="https://cse.google.com/cse.js?cx=13a0dccfea6d6816a"></Script>
                         <div className="w-full">
-                            <div className="gcse-searchbox-only"></div>
+                            <Script async src="https://cse.google.com/cse.js?cx=13a0dccfea6d6816a"></Script>
+                            <div className="gcse-searchbox-only" data-resultsurl="https://thietbihq.com/search"></div>
                         </div>
                     </div>
                     <div className="hidden md:col-span-1 md:flex flex-col justify-center">

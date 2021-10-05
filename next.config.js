@@ -51,6 +51,10 @@ module.exports = {
                 source: '/lien-he.html',
                 destination: '/contact',
             },
+            {
+                source: '/search',
+                destination: '/search',
+            },
         ]
     },
 }
