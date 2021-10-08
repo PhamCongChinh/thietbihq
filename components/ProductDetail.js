@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../features/cart/cartSlice'
+import Lightbox from 'react-image-lightbox'
 
 const ProductDetail = ({ product }) => {
+    const [isOpen, setIsOpen] = useState(false)
+
     const item = {
         id: product.id,
         name: product.name,
@@ -15,9 +18,15 @@ const ProductDetail = ({ product }) => {
     return (
         <div className="text-gray-700 leading-6">
             <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="flex justify-center md:col-span-1 p-4 max-h-80 hover:transform scale-75">
+                <div className="flex justify-center cursor-pointer md:col-span-1 p-4 max-h-80" onClick={() => setIsOpen( true )}>
                     <Image src={`/images/pr/${product.slug}.jpg`} alt={product.name} height={300} width={300}/>
                 </div>
+                {isOpen && (
+                    <Lightbox
+                        mainSrc={`/images/pr/${product.slug}.jpg`}
+                        onCloseRequest={() => setIsOpen(false)}
+                    />
+                )}
                 <div className="md:col-span-1 p-4">
                     <div className="border-b pb-3">
                         <h1 className="text-2xl">{product.name}</h1>

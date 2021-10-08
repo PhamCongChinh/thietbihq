@@ -1,7 +1,7 @@
 import 'tailwindcss/tailwind.css'
 import '../public/styles.css'
 import 'react-toastify/dist/ReactToastify.css'
-
+import 'react-image-lightbox/style.css'
 import { useEffect } from 'react'
 import TagManager from 'react-gtm-module'
 
