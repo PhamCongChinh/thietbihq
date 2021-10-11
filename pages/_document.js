@@ -6,6 +6,7 @@ class MyDocument extends Document {
             <Html lang="vi">
                 <Head>
                     <link rel="icon" href="/favicon.ico" />
+                    <meta name="google-site-verification" content="Zdqf3xmxGsaBBUhwI8PeQvEbeEfLSx0S1p_K2c87kA8" />
                 </Head>
                 <body>
                     <Main />
