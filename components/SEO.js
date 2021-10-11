@@ -2,8 +2,6 @@ import Head from 'next/head'
 const SEO = ({ description, title, siteTitle, keywords }) => {
     return (
         <Head>
-            <link rel="icon" href="/favicon.ico" />
-            <meta name="google-site-verification" content="Zdqf3xmxGsaBBUhwI8PeQvEbeEfLSx0S1p_K2c87kA8" />
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             <meta charSet="utf-8" />
             <title>{`${title}`}</title>
