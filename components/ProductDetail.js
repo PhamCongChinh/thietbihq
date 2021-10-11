@@ -18,8 +18,12 @@ const ProductDetail = ({ product }) => {
     return (
         <div className="text-gray-700 leading-6">
             <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="flex justify-center cursor-pointer md:col-span-1 p-4 max-h-80" onClick={() => setIsOpen( true )}>
-                    <Image src={`/images/pr/${product.slug}.jpg`} alt={product.name} height={300} width={300}/>
+                <div className="flex justify-center md:col-span-1 p-4">
+                    <div className="flex flex-col">
+                        <div className="cursor-pointer max-h-80 w-full" onClick={() => setIsOpen( true )}>
+                            <Image src={`/images/pr/${product.slug}.jpg`} alt={product.name} height={300} width={300}/>
+                        </div>
+                    </div>
                 </div>
                 {isOpen && (
                     <Lightbox
