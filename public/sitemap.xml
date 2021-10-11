@@ -4,382 +4,436 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
   <loc>https://thietbihq.com/</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/gioi-thieu.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/tin-tuc.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
-  <priority>0.60</priority>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/khach-hang.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
-  <priority>0.60</priority>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/nha-san-xuat.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
-  <priority>0.60</priority>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/tuyen-dung.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
-  <priority>0.60</priority>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/dich-vu.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/lien-he.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
-  <priority>1.00</priority>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/shop/cart</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
-  <priority>0.60</priority>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
-  <priority>1.00</priority>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/noi-that-hoa-phat-27.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/son-the-thao-nam-dinh-26.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
-  <priority>0.80</priority>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/thiet-bi-khu-cong-nghiep-25.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/may-san-xuat-nganh-nhua-24.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/may-day-chuyen-san-xuat-23.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/may-dan-nhan-tem-22.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/may-tach-phan-loai-mau-21.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/thiet-bi-do-moi-truong-20.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/thiet-bi-nganh-may-19.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/thiet-bi-cam-bien-18.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/thiet-bi-thu-nghiem-cao-su-17.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/thiet-bi-do-thu-nghiem-son-16.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/may-do-kim-loai-15.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/may-phan-tich-14.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/thu-nghiem-an-toan-co-ly-13.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/thiet-bi-do-duong-ong-12.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/thiet-bi-kiem-tra-bo-mach-IC-11.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/thiet-bi-do-vien-thong-10.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/dung-cu-do-thu-nghiem-dien-9.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/bo-dung-cu-thi-cong-dien-8.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/thiet-bi-nguon-AC-DC-7.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/may-dung-cu-co-khi-6.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/may-han-quang-5.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/may-so-mau-4.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/bien-tan-va-linh-kien-3.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/may-hien-song-2.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/san-pham/kinh-hien-vi-1.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/ghe-da-SG901-3.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/ghe-da-SG669-6.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/ghe-hop-tua-luoi-GL423-7.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/ghe-hop-tua-luoi-GL425-8.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/ghe-hop-tua-luoi-GL426-9.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/ghe-ngoi-may-170.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/may-dem-san-luong-bosung-rs-5-169.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/vach-ngan-mica-168.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/luoi-chong-muoi-soi-thuy-tinh-167.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/thung-nhua-166.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/nhua-lam-ga-rang-dong-165.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/xe-thang-di-dong-164.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/dien-cuc-ph-phang-dung-pin-cap-5m-hi6100805-163.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/mang-day-chuyen-162.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/tham-cau-long-enlio-nam-dinh-161.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/son-san-epoxy-kho-nha-xuong-nam-dinh-160.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/thi-cong-san-dien-kinh-nam-dinh-159.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/xe-day-bt-300-158.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/may-hien-song-tuong-tu-pintek-ps-355-157.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/may-hien-song-tuong-tu-owon-as101-156.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/may-hien-song-tuong-tu-gw-instek-gos-630fc-155.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/may-hien-song-so-owon-sds5032e-154.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/may-hien-song-so-owon-sds1052-153.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://thietbihq.com/chi-tiet/may-hien-song-so-owon-sds1022-152.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://thietbihq.com/chi-tiet/may-hien-song-cam-tay-owon-hds1022m-i-151.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://thietbihq.com/chi-tiet/may-hien-song-cam-tay-owon-hds1021m-n-150.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://thietbihq.com/chi-tiet/may-hien-song-cam-tay-extech-ms420-149.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://thietbihq.com/chi-tiet/kinh-lup-cam-tay-proskit-8pk-ma006-148.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://thietbihq.com/chi-tiet/kinh-lup-cam-tay-proskit-8pk-ma005-147.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://thietbihq.com/chi-tiet/kinh-lup-cam-tay-pro-skit-ma-020-19mm-146.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://thietbihq.com/chi-tiet/kinh-lup-bo-tui-niigata-seiki-no-7020-w-145.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://thietbihq.com/chi-tiet/kinh-hien-vi-da-xem-pb-3468-144.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://thietbihq.com/chi-tiet/kinh-hien-vi-da-nang-mot-thi-kinh-143.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://thietbihq.com/chi-tiet/kinh-hien-vi-da-nang-htimbl2000-series-142.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/may-hien-song-so-GWinstek-GDS-1102A-U-128.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/may-hien-song-tuong-tu-pintek-ps-600-129.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/may-hien-song-so-cam-tay-owon-hds2061m-n-131.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/may-hien-song-cam-tay-owon-hds1022m-n-141.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/may-hien-song-cam-tay-extech-ms420-149.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/may-hien-song-cam-tay-owon-hds1021m-n-150.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/may-hien-song-cam-tay-owon-hds1022m-i-151.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/may-hien-song-so-owon-sds1022-152.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/kinh-hien-vi-ky-thuat-so-cam-tay-Dino-Lite-AM5018MZTL-11.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/kinh-lup-bo-tui-co-den-led-chieu-sang-niigata-seiki-ll-15-130.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/kinh-hien-vi-luyen-kim-pm-304l-132.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/kinh-hien-vi-luyen-kim-pm-430-8-133.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/kinh-hien-vi-luyen-kim-pm-530-8-134.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/kinh-hien-vi-luyen-kim-pm-630a-10-135.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/kinh-hien-vi-soi-noi-kern-ose-411-136.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/kinh-hien-vi-soi-noi-kern-ose-413-2-thi-kinh-137.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/kinh-hien-vi-soi-noi-kern-osf-430-1x-3x-2-thi-kinh-138.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/kinh-hien-vi-soi-noi-osf-431-2x-4x-2-thi-kinh-139.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://thietbihq.com/chi-tiet/kinh-lup-co-thuoc-do-peak-2055-20x-140.html</loc>
-  <lastmod>2021-10-06T19:12:24+00:00</lastmod>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/kinh-hien-vi-da-nang-htimbl2000-series-142.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/kinh-hien-vi-da-nang-mot-thi-kinh-143.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/kinh-hien-vi-da-xem-pb-3468-144.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/kinh-lup-bo-tui-niigata-seiki-no-7020-w-145.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/kinh-lup-cam-tay-pro-skit-ma-020-19mm-146.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/kinh-lup-cam-tay-proskit-8pk-ma005-147.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://thietbihq.com/chi-tiet/kinh-lup-cam-tay-proskit-8pk-ma006-148.html</loc>
+  <lastmod>2021-10-11T21:17:45+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 

@@ -1,0 +1,8 @@
+Sitemap: https://thietbihq.com/sitemap.xml
+
+User-agent: *
+Disallow: /api/*
+Disallow: /_next/*
+Disallow: /js
+
+Allow: /*
