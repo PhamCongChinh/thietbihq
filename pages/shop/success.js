@@ -19,11 +19,12 @@ const Success = () => {
 }
 
 Success.getLayout = function getLayout(page) {
-    const breadcrumb = [
-        {name: 'Thành công', url: '/shop/success'}
-    ]
+    const data = {
+		SEO: {meta_title: 'Đặt hàng thành công', meta_description: '', meta_keywords: ''},
+		breadcrumb: [{name: 'Đặt hàng thành công', url: '/shop/success'}],
+	}
     return (
-        <LayoutDefault breadcrumb={breadcrumb}>{page}</LayoutDefault>
+        <LayoutDefault data={data}>{page}</LayoutDefault>
     )
 }
 export default Success

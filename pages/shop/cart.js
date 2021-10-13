@@ -66,11 +66,12 @@ const Cart = () => {
 }
 
 Cart.getLayout = function getLayout(page) {
-    const breadcrumb = [
-        {name: 'Giỏ hàng', url: '/shop/cart'}
-    ]
+    const data = {
+		SEO: {meta_title: 'Giỏ hàng', meta_description: '', meta_keywords: ''},
+		breadcrumb: [{name: 'Giỏ hàng', url: '/shop/cart'}],
+	}
     return (
-        <LayoutDefault breadcrumb={breadcrumb}>{page}</LayoutDefault>
+        <LayoutDefault data={data}>{page}</LayoutDefault>
     )
 }
 export default Cart

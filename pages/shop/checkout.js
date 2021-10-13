@@ -132,11 +132,12 @@ const Checkout = () => {
 }
 
 Checkout.getLayout = function getLayout(page) {
-    const breadcrumb = [
-        {name: 'Đặt hàng', url: '/shop/checkout'}
-    ]
+    const data = {
+		SEO: {meta_title: 'Đặt hàng', meta_description: '', meta_keywords: ''},
+		breadcrumb: [{name: 'Đặt hàng', url: '/shop/checkout'}],
+	}
     return (
-        <LayoutDefault breadcrumb={breadcrumb}>{page}</LayoutDefault>
+        <LayoutDefault data={data}>{page}</LayoutDefault>
     )
 }
 
